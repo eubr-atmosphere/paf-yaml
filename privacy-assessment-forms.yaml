@@ -125,6 +125,8 @@ spec:
           - name: MYSQL_USER
             value: app
           image: mysql:5.7
+          args:
+          - "--ignore-db-dir=lost+found"
           ports:
           - containerPort: 3306
           resources: {}
